@@ -1,0 +1,145 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 5FAF93E9
+P 6650 2900
+F 0 "U1" H 6650 3267 50  0000 C CNN
+F 1 "LM358" H 6650 3176 50  0000 C CNN
+F 2 "LM358:LM358" H 6650 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6650 2900 50  0001 C CNN
+	1    6650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:IR26-21C_L110_TR8 D1
+U 1 1 5FB1BA9F
+P 5150 2600
+F 0 "D1" V 5189 2482 50  0000 R CNN
+F 1 "IR LED" V 5098 2482 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 5150 2800 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR26-21C-L110-TR8.pdf" H 5150 2600 50  0001 C CNN
+	1    5150 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB1C33E
+P 5150 3250
+F 0 "R1" H 5220 3296 50  0000 L CNN
+F 1 "1k" H 5220 3205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5080 3250 50  0001 C CNN
+F 3 "~" H 5150 3250 50  0001 C CNN
+	1    5150 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Optical:SFH203 D2
+U 1 1 5FB21AB9
+P 5750 2650
+F 0 "D2" V 5654 2808 50  0000 L CNN
+F 1 "IR sensor" V 5745 2808 50  0000 L CNN
+F 2 "LED_THT:LED_D3.0mm_IRBlack" H 5750 2825 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic9/00101656_0.pdf/SFH%20203,%20SFH%20203%20FA,%20Lead%20(Pb)%20Free%20Product%20-%20RoHS%20Compliant.pdf" H 5700 2650 50  0001 C CNN
+	1    5750 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FB22808
+P 5750 3250
+F 0 "R2" H 5820 3296 50  0000 L CNN
+F 1 "10k" H 5820 3205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5680 3250 50  0001 C CNN
+F 3 "~" H 5750 3250 50  0001 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5FB22F70
+P 4650 3000
+F 0 "RV1" H 4581 3046 50  0000 R CNN
+F 1 "R_POT" H 4581 2955 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4650 3000 50  0001 C CNN
+F 3 "~" H 4650 3000 50  0001 C CNN
+	1    4650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3000 6350 3000
+Wire Wire Line
+	5750 2750 5750 2800
+Wire Wire Line
+	5150 2700 5150 2750
+Wire Wire Line
+	5150 3400 5150 3550
+Wire Wire Line
+	5150 3550 4650 3550
+Wire Wire Line
+	4650 3150 4650 3550
+Wire Wire Line
+	5150 3550 5750 3550
+Wire Wire Line
+	5750 3550 5750 3400
+Connection ~ 5150 3550
+Wire Wire Line
+	6350 2800 5750 2800
+Connection ~ 5750 2800
+Wire Wire Line
+	5750 2800 5750 3100
+Connection ~ 5150 2750
+Wire Wire Line
+	5150 2750 5150 3100
+Wire Wire Line
+	5750 2450 5150 2450
+Connection ~ 5150 2450
+Wire Wire Line
+	5150 2450 4650 2450
+Wire Wire Line
+	4650 2850 4650 2450
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5FB1B813
+P 7300 2900
+F 0 "J1" H 7380 2942 50  0000 L CNN
+F 1 "Connector" H 7380 2851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7300 2900 50  0001 C CNN
+F 3 "~" H 7300 2900 50  0001 C CNN
+	1    7300 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2800 7100 2450
+Wire Wire Line
+	7100 2450 5750 2450
+Connection ~ 5750 2450
+Connection ~ 5750 3550
+Wire Wire Line
+	6950 2900 6950 3000
+Wire Wire Line
+	6950 3000 7100 3000
+Wire Wire Line
+	7100 3550 5750 3550
+Wire Wire Line
+	7100 2900 7050 2900
+Wire Wire Line
+	7050 2900 7050 3250
+Wire Wire Line
+	7050 3250 7100 3250
+Wire Wire Line
+	7100 3250 7100 3550
+$EndSCHEMATC
